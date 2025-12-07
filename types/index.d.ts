@@ -64,6 +64,12 @@ export interface CQTBase {
    * @returns [numFrames, nBins]
    */
   getOutputShape(audioLength: number): [number, number];
+
+  /**
+   * Release WASM memory
+   * Call this when done using the CQT instance
+   */
+  delete(): void;
 }
 
 /**

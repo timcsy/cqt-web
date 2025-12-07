@@ -86,7 +86,8 @@ if(BUILD_WASM)
         -sEXPORT_NAME="createCQTModule"
         -sALLOW_MEMORY_GROWTH=1
         -sEXPORTED_RUNTIME_METHODS=['ccall','cwrap']
-        -sENVIRONMENT=web
+        -sENVIRONMENT=web,worker
+        -sEXPORT_ES6=1
         --bind
         -O3
     )

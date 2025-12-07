@@ -102,6 +102,7 @@ export class HybridCQT implements CQTBase {
   getFrequencies(): Float64Array;
   getFilterLengths(): Int32Array;
   getOutputShape(audioLength: number): [number, number];
+  delete(): void;
 }
 
 /**
@@ -135,6 +136,7 @@ export class StandardCQT implements CQTBase {
   getFrequencies(): Float64Array;
   getFilterLengths(): Int32Array;
   getOutputShape(audioLength: number): [number, number];
+  delete(): void;
 }
 
 /**
@@ -160,6 +162,7 @@ export class PseudoCQT implements CQTBase {
   getFrequencies(): Float64Array;
   getFilterLengths(): Int32Array;
   getOutputShape(audioLength: number): [number, number];
+  delete(): void;
 }
 
 /**
@@ -191,6 +194,7 @@ export class VQT implements CQTBase {
   getFrequencies(): Float64Array;
   getFilterLengths(): Int32Array;
   getOutputShape(audioLength: number): [number, number];
+  delete(): void;
 }
 
 /**

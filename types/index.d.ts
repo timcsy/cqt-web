@@ -199,8 +199,9 @@ export class VQT implements CQTBase {
 
 /**
  * Backwards compatibility alias for HybridCQT
+ * @deprecated Use HybridCQT directly instead
  */
-export class CQT extends HybridCQT {}
+export type CQT = HybridCQT;
 
 /**
  * FFT result object
@@ -316,7 +317,6 @@ export interface CQTModule {
   StandardCQT: typeof StandardCQT;
   PseudoCQT: typeof PseudoCQT;
   VQT: typeof VQT;
-  CQT: typeof CQT;
   FFT: typeof FFT;
   noteToHz: typeof noteToHz;
   midiToHz: typeof midiToHz;

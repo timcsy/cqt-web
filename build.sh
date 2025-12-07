@@ -83,6 +83,12 @@ if [ "$BUILD_TYPE" = "wasm" ]; then
     print_status "Building..."
     emmake make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu)
 
+    # Add ES module export for browser compatibility
+    cd "$SCRIPT_DIR"
+    print_status "Adding ES module export..."
+    echo "" >> dist/cqt.js
+    echo "export default createCQTModule;" >> dist/cqt.js
+
     print_status "WebAssembly build complete!"
     print_status "Output files:"
     echo "  - dist/cqt.js"

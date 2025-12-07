@@ -87,12 +87,12 @@ if(BUILD_WASM)
         -sALLOW_MEMORY_GROWTH=1
         -sEXPORTED_RUNTIME_METHODS=['ccall','cwrap']
         -sENVIRONMENT=web,worker
-        -sEXPORT_ES6=1
+        -sASSERTIONS=1
         --bind
-        -O3
+        -O2
     )
 
-    # Copy output to dist directory
+    # Copy output to dist directory (ES module export is added by build.sh)
     add_custom_command(TARGET cqt_wasm POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
             $<TARGET_FILE:cqt_wasm>

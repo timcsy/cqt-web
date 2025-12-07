@@ -1,6 +1,6 @@
 {
   "name": "cqt-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "librosa-compatible CQT (Constant-Q Transform) implementation in WebAssembly",
   "main": "dist/cqt.js",
   "types": "types/index.d.ts",

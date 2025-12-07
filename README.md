@@ -202,6 +202,42 @@ This implementation aims for numerical compatibility with librosa:
 
 3. **Clean up**: Always call `delete()` when done to free WASM memory.
 
+## Building from Source
+
+### Prerequisites
+
+- CMake 3.14+
+- C++17 compiler
+- [Emscripten](https://emscripten.org/) (for WebAssembly build)
+
+### Build Commands
+
+```bash
+# Build WebAssembly version (for browser/npm)
+./build.sh --wasm
+
+# Build native version (for testing)
+./build.sh
+
+# Clean build
+./build.sh --clean --wasm
+```
+
+### Build Options
+
+| Option | Description |
+|--------|-------------|
+| `--wasm` | Build WebAssembly version using Emscripten |
+| `--clean` | Clean build directory before building |
+| `--help` | Show help message |
+
+### Output Files
+
+After building with `--wasm`, the following files are generated in `dist/`:
+
+- `cqt.js` - JavaScript glue code with ES module export
+- `cqt.wasm` - WebAssembly binary
+
 ## License
 
 MIT

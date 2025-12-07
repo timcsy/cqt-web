@@ -451,22 +451,6 @@ EMSCRIPTEN_BINDINGS(cqt_module) {
         .function("getFilterLengths", &VQTWrapper::getFilterLengths)
         .function("getOutputShape", &VQTWrapper::getOutputShape);
 
-    // Backwards compatibility: CQT alias for HybridCQT
-    class_<HybridCQTWrapper>("CQT")
-        .constructor<>()
-        .constructor<int, int, int, int, float>()
-        .function("compute", &HybridCQTWrapper::compute)
-        .function("computeWithProgress", &HybridCQTWrapper::computeWithProgress)
-        .function("getSampleRate", &HybridCQTWrapper::getSampleRate)
-        .function("getHopLength", &HybridCQTWrapper::getHopLength)
-        .function("getBinsPerOctave", &HybridCQTWrapper::getBinsPerOctave)
-        .function("getNBins", &HybridCQTWrapper::getNBins)
-        .function("getFmin", &HybridCQTWrapper::getFmin)
-        .function("getQ", &HybridCQTWrapper::getQ)
-        .function("getFrequencies", &HybridCQTWrapper::getFrequencies)
-        .function("getFilterLengths", &HybridCQTWrapper::getFilterLengths)
-        .function("getOutputShape", &HybridCQTWrapper::getOutputShape);
-
     // FFT utilities
     class_<FFTWrapper>("FFT")
         .class_function("forward", &FFTWrapper::forward)

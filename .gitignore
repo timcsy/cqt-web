@@ -1,0 +1,20 @@
+# Build directories
+build/
+build-wasm/
+
+# Node modules
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test outputs
+*.log

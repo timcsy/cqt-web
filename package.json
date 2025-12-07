@@ -1,0 +1,52 @@
+{
+  "name": "cqt-web",
+  "version": "1.0.0",
+  "description": "librosa-compatible CQT (Constant-Q Transform) implementation in WebAssembly",
+  "main": "dist/cqt.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/cqt.js",
+    "dist/cqt.wasm",
+    "types/index.d.ts"
+  ],
+  "scripts": {
+    "build": "./build.sh --wasm",
+    "build:native": "./build.sh",
+    "clean": "rm -rf build build-wasm dist/*.js dist/*.wasm",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cqt",
+    "constant-q",
+    "audio",
+    "dsp",
+    "signal-processing",
+    "wasm",
+    "webassembly",
+    "librosa",
+    "music",
+    "spectrogram",
+    "frequency-analysis",
+    "vqt",
+    "fft",
+    "audio-analysis",
+    "music-information-retrieval"
+  ],
+  "author": "timcsy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timcsy/cqt-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timcsy/cqt-web/issues"
+  },
+  "homepage": "https://github.com/timcsy/cqt-web#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false
+  }
+}
